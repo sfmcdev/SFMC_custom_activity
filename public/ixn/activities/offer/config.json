@@ -8,8 +8,8 @@
     "type": "REST",
     "lang": {
         "en-US": {
-            "name": "SB Offer",
-            "description": "Activity for SB Offer."
+            "name": "Inbox Message",
+            "description": "Configure the Inbox Message contents"
         }
     },
     "arguments": {
