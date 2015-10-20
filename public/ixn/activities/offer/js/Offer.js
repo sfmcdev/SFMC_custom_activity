@@ -36,11 +36,15 @@ define( function( require ) {
 		});                
 
         // If there is no amount selected, disable the next button
+		/*
         if (!amount) {
             connection.trigger('updateButton', { button: 'next', enabled: false });
         }
 
 		$('#selectAmount').find('option[value='+ amount +']').attr('selected', 'selected');		
+		*/
+		
+		connection.trigger('updateButton', { button: 'next', enabled: false });
 		gotoStep(step);
         
     });
