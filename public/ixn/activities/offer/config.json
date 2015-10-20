@@ -1,0 +1,62 @@
+{
+    "workflowApiVersion": "1.0",
+    "metaData": {
+        "version": "2.0",
+        "icon": "images/jb-icon.jpg",
+        "iconSmall": "images/jb-icon.jpg"
+    },
+    "type": "REST",
+    "lang": {
+        "en-US": {
+            "name": "SB Offer",
+            "description": "Activity for SB Offer."
+        }
+    },
+    "arguments": {
+        "execute": {       
+			"inArguments":[
+				{ "firstName":"{{Contact.Attribute.__your-de-name__.First_Name}}"},
+				{ "lastName":"{{Contact.Attribute.__your-de-name__.Last_Name}}"},
+				{ "emailAddress": "{{Contact.Default.Email}}"},
+                { "dataFromEventTrigger": "{{Event.ContactEvent-0d2e7f87-b9a2-32b1-6120-89b2f1340239.myTriggerData}}"}		
+			],
+            "outArguments": [
+            	{ "offerAllocationId":"number" }
+			],			
+			"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/execute/",
+            "verb": "POST",
+            "body": "",
+            "header": "",
+            "format": "json",
+            "useJwt": false,
+            "timeout": 10000
+        }
+    },
+    "configurationArguments": {
+    	"applicationExtensionKey": "sb-sample-offer-activity",
+        "defaults": { "example_default_key": "example_default_value"},             
+        "save": {
+        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/save/",
+            "body": "",
+            "verb": "POST",
+            "useJwt": false
+        },
+        "publish": {
+        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/publish/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false
+        },
+        "validate": {
+        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/validate/",
+            "verb": "POST",
+            "body": "",
+            "useJwt": false            
+        }
+    },
+    "edit": {
+    	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/",
+        "height": 400,
+        "width": 500
+    }
+}

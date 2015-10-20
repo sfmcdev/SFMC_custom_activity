@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Configure Offer</title>
+	<script data-main="js/main.js" src="js/require.js"></script>
+
+	<!--Styles-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+<body>
+	<div id="step1" class="step">
+		<p><small id="version"></small></p>
+		<p/>
+		<h1>Custom Activity</h1>
+		<p>This Activity matches the subscriber to an offer.</p>
+		<p/>  
+
+		<table>
+			<tr>
+				<th>Value Tier</th>
+				<th>Type</th>
+				<th>Offer</th>
+			</tr>
+			<tr>
+				<td>
+					<select id="selectValueTier">
+						<option value="">Select an option</option>
+						<option value="all">ALL</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="none">NONE</option>
+					</select>
+				</td>
+				<td>
+					<select id="selectType">
+						<option value="">Select an option</option>
+						<option value="trigger">Trigger</option>
+						<option value="token">Token</option>
+					</select>
+				</td>
+				<td>
+					<select id="selectBonus">
+						<option value="">Select an option</option>
+						<option value="1">Free Bet</option>
+						<option value="2">Double Trouble</option>
+						<option value="3">Cash Back</option>
+						<option value="4">Reload Bonus</option>
+					</select>
+				</td>
+			</tr>
+		</table>      
+	</div>
+	<div id="step2" class="step">
+		<p>Please review your settings.</p>
+		
+		Value Tier: <span id="showValueTier"></span><br />
+		Type: <span id="showType"></span><br />
+		Bonus: <span id="showBonus"></span><br />
+	</div>			
+</body>
+</html>
