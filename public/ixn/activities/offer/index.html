@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Configure Offer</title>
+    <title>Configure Inbox Message</title>
 	<script data-main="js/main.js" src="js/require.js"></script>
 
 	<!--Styles-->
@@ -13,10 +13,42 @@
 	<div id="step1" class="step">
 		<p><small id="version"></small></p>
 		<p/>
-		<h1>Custom Activity</h1>
-		<p>This Activity matches the subscriber to an offer.</p>
-		<p/>  
+			<h1>INBOX API</h1>
+			<p>Inbox Message Configuration</p>
+		<p/>
 
+		<table>
+			<tr><td>
+					<select id="selectCouponType">
+						<option value="type_coupon">COUPON</option>
+						<option value="type_other">OTHER</option>						
+					</select>			
+			</td></tr>
+		</table>
+		<h2>English Contents</h2>
+		<table>
+			<tr>
+				<td>Title</td>
+				<td><input id="title_en"/></td>
+			</tr>
+			<tr>
+				<td>Contents</td>
+				<td><input id="content_en"/></td>
+			</tr>
+		</table>
+		
+		<h2>Chinese Contents</h2>
+		<table>
+			<tr>
+				<td>Title</td>
+				<td><input id="title_tc"/></td>
+			</tr>
+			<tr>
+				<td>Contents</td>
+				<td><input id="content_tc"/></td>
+			</tr>
+		</table>
+<!--
 		<table>
 			<tr>
 				<th>Value Tier</th>
@@ -52,6 +84,7 @@
 				</td>
 			</tr>
 		</table>      
+		-->
 	</div>
 	<div id="step2" class="step">
 		<p>Please review your settings.</p>
