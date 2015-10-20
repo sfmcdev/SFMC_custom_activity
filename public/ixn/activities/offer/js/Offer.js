@@ -71,6 +71,7 @@ define( function( require ) {
         connection.trigger('requestEndpoints');
 
         // Disable the next button if a value isn't selected
+		/*
         $('#selectValueTier').change(function() {
             var valueTier = getValueTier();
             var type = getType();
@@ -94,7 +95,8 @@ define( function( require ) {
             var valid = Boolean(valueTier) && Boolean(bonus) && Boolean(type);
             connection.trigger('updateButton', { button: 'next', enabled: valid });
         });
-
+*/
+		connection.trigger('updateButton', { button: 'next', enabled: true});
 
     };
 
@@ -103,13 +105,14 @@ define( function( require ) {
         switch(step) {
             case 1:
                 $('#step1').show();
-                var valueTier = getValueTier();
-                var type = getType();
-                var bonus = getBonus();
-                var valid = Boolean(valueTier) && Boolean(bonus) && Boolean(type);
-                connection.trigger('updateButton', { button: 'next', text: 'next', enabled: valid });
+                //var valueTier = getValueTier();
+                //var type = getType();
+                //var bonus = getBonus();
+                //var valid = Boolean(valueTier) && Boolean(bonus) && Boolean(type);
+                connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
                 connection.trigger('updateButton', { button: 'back', visible: false });
                 break;
+				/*
             case 2:
                 $('#step2').show();
                 $('#showValueTier').html(getValueTierText());
@@ -119,6 +122,8 @@ define( function( require ) {
                 connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
                 break;
             case 3: // Only 2 steps, so the equivalent of 'done' - send off the payload
+			*/
+			default:
                 save();
                 break;
         }
