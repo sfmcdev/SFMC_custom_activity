@@ -72,9 +72,10 @@ define( function( require ) {
 
     function onRender() {
         connection.trigger('ready');
+		connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 
-		connection.trigger('updateButton', { button: 'next', enabled: true});
+		//connection.trigger('updateButton', { button: 'next', enabled: true});
 
     };
 
@@ -85,6 +86,8 @@ define( function( require ) {
                 $('#step1').show();
                 connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
                 connection.trigger('updateButton', { button: 'back', visible: false });
+				
+				connection.trigger( 'updateStep', step ); 
             break;
 			default:
                 save();
@@ -114,23 +117,6 @@ define( function( require ) {
 	}
     function getMessageType() {
         return $('#selectMessageType').find('option:selected').attr('value').trim();
-    };
-
-    function getValueTier() {
-        return $('#selectValueTier').find('option:selected').attr('value').trim();
-    };
-    function getBonus() {
-        return $('#selectBonus').find('option:selected').attr('value').trim();
-    };
-
-    function getValueTierText() {
-        return $('#selectValueTier').find('option:selected').text().trim();
-    };
-    function getTypeText() {
-        return $('#selectType').find('option:selected').text().trim();
-    };
-    function getBonusText() {
-        return $('#selectBonus').find('option:selected').text().trim();
     };
 
     function save() {
