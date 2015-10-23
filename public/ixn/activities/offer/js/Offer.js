@@ -109,29 +109,19 @@ define( function( require ) {
         switch(step) {
             case 1:
                 $('#step1').show();
-                //var valueTier = getValueTier();
-                //var type = getType();
-                //var bonus = getBonus();
-                //var valid = Boolean(valueTier) && Boolean(bonus) && Boolean(type);
                 connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
                 connection.trigger('updateButton', { button: 'back', visible: false });
-                break;
-				/*
-            case 2:
-                $('#step2').show();
-                $('#showValueTier').html(getValueTierText());
-                $('#showType').html(getTypeText());
-                $('#showBonus').html(getBonusText());
-                connection.trigger('updateButton', { button: 'back', visible: true });
-                connection.trigger('updateButton', { button: 'next', text: 'done', visible: true });
-                break;
-            case 3: // Only 2 steps, so the equivalent of 'done' - send off the payload
-			*/
+            break;
 			default:
                 save();
-                break;
+            break;
         }
     };
+	
+	function getTitleEn()
+	{
+		return $('#title_en').attr('value').trim();
+	}
 
     function getValueTier() {
         return $('#selectValueTier').find('option:selected').attr('value').trim();
@@ -164,9 +154,10 @@ define( function( require ) {
         //toJbPayload.name = "my activity";
 
         //this will be sent into the custom activity body within the inArguments array.
-        toJbPayload['arguments'].execute.inArguments.push({"valueTier": valueTier});
-        toJbPayload['arguments'].execute.inArguments.push({"type": type});
-        toJbPayload['arguments'].execute.inArguments.push({"bonus": bonus});
+		var title_en = getTitleEn();
+        toJbPayload['arguments'].execute.inArguments.push({"valueTitleEn": title_en});
+        //toJbPayload['arguments'].execute.inArguments.push({"type": type});
+        //toJbPayload['arguments'].execute.inArguments.push({"bonus": bonus});
 
 		/*
         toJbPayload['metaData'].things = 'stuff';
