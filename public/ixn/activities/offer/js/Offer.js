@@ -120,7 +120,7 @@ define( function( require ) {
 	
 	function getTitleEn()
 	{
-		return $('#title_en').attr('value').trim();
+		return $('#titleEn').attr('value').trim();
 	}
 
     function getValueTier() {
@@ -145,17 +145,17 @@ define( function( require ) {
 
     function save() {
 
-        var valueTier = getValueTier();
-        var type = getType();
-        var bonus = getBonus();
+        //var valueTier = getValueTier();
+        //var type = getType();
+        //var bonus = getBonus();
 
         // toJbPayload is initialized on populateFields above.  Journey Builder sends an initial payload with defaults
         // set by this activity's config.json file.  Any property may be overridden as desired.
         //toJbPayload.name = "my activity";
 
         //this will be sent into the custom activity body within the inArguments array.
-		var title_en = getTitleEn();
-        toJbPayload['arguments'].execute.inArguments.push({"valueTitleEn": title_en});
+		var titleEn = getTitleEn();
+        toJbPayload['arguments'].execute.inArguments.push({"titleEn": titleEn});
         //toJbPayload['arguments'].execute.inArguments.push({"type": type});
         //toJbPayload['arguments'].execute.inArguments.push({"bonus": bonus});
 

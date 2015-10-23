@@ -85,9 +85,10 @@ exports.execute = function( req, res ) {
 	var lname = oArgs.lastName;
 
 	// these values come from the custom activity form inputs
-	var valueTier = oArgs.valueTier;
-	var bonusType = oArgs.type;
-	var bonusId = oArgs.bonus;
+	var titleEn = oArgs.titleEn;
+	//var valueTier = oArgs.valueTier;
+	//var bonusType = oArgs.type;
+	//var bonusId = oArgs.bonus;
 
 	// any logic for bonus allocation can go here...
 	// This is a placeholder that shows an example https call
@@ -96,9 +97,10 @@ exports.execute = function( req, res ) {
 	console.log('allocateOffer for ', contactKey);
 	var post_data = JSON.stringify({  
 		"contactKey":contactKey,
-		"valueTier": valueTier,
-		"bonusType":bonusType,
-		"bonusId":bonusId
+		//"valueTier": valueTier,
+		//"bonusType":bonusType,
+		//"bonusId":bonusId
+		"titleEn": titleEn
 	});			
 
 	var options = {
