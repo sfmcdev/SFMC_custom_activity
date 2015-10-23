@@ -11,15 +11,13 @@
 </head>
 <body>
 	<div id="step1" class="step">
-		<p><small id="version"></small></p>
-		<p/>
-			<h1>INBOX API</h1>
-			<p>Inbox Message Configuration</p>
-		<p/>
-
+		<p><small id="version"></small></p>		
+			<!--<h1>INBOX API</h1>-->
+			<!--<H1>Inbox Message Configuration</H1>-->
+			<h2>Message Type</h2>
 		<table>
 			<tr><td>
-					<select id="selectCouponType">
+					<select id="selectMessageType">
 						<option value="type_coupon">COUPON</option>
 						<option value="type_other">OTHER</option>						
 					</select>			
@@ -33,7 +31,7 @@
 			</tr>
 			<tr>
 				<td>Contents</td>
-				<td><input id="contentEn"/></td>
+				<td><input id="contentEn" class="contents"/></td>
 			</tr>
 		</table>
 		
@@ -45,17 +43,18 @@
 			</tr>
 			<tr>
 				<td>Contents</td>
-				<td><input id="contentTc"/></td>
+				<td><input id="contentTc" class="contents"/></td>
 			</tr>
 		</table>
 
 	</div>
 	<div id="step2" class="step">
 		<p>Please review your settings.</p>
-		
+		<!--
 		Value Tier: <span id="showValueTier"></span><br />
 		Type: <span id="showType"></span><br />
 		Bonus: <span id="showBonus"></span><br />
+		-->
 	</div>			
 </body>
 </html>

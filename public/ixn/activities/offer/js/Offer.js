@@ -122,12 +122,28 @@ define( function( require ) {
 	{
 		return $('#titleEn').attr('value').trim();
 	}
+	
+	function getContentEn()
+	{
+		return $('#contentEn').attr('value').trim();
+	}
+	
+	
+	function getTitleTc()
+	{
+		return $('#titleTc').attr('value').trim();
+	}
+	
+	function getContentTc()
+	{
+		return $('#contentTc').attr('value').trim();
+	}
+    function getMessageType() {
+        return $('#selectMessageType').find('option:selected').attr('value').trim();
+    };
 
     function getValueTier() {
         return $('#selectValueTier').find('option:selected').attr('value').trim();
-    };
-    function getType() {
-        return $('#selectType').find('option:selected').attr('value').trim();
     };
     function getBonus() {
         return $('#selectBonus').find('option:selected').attr('value').trim();
@@ -155,7 +171,16 @@ define( function( require ) {
 
         //this will be sent into the custom activity body within the inArguments array.
 		var titleEn = getTitleEn();
+		var contentEn = getContentEn();
+		var titleTc = getTitleTc();
+		var contentTc = getContentTc();
+		var messageType = getMessageType();
+		
         toJbPayload['arguments'].execute.inArguments.push({"titleEn": titleEn});
+		toJbPayload['arguments'].execute.inArguments.push({"contentEn": contentEn});
+		toJbPayload['arguments'].execute.inArguments.push({"titleTc": titleTc});
+		toJbPayload['arguments'].execute.inArguments.push({"contentTc": contentTc});
+		toJbPayload['arguments'].execute.inArguments.push({"messageType": messageType});
         //toJbPayload['arguments'].execute.inArguments.push({"type": type});
         //toJbPayload['arguments'].execute.inArguments.push({"bonus": bonus});
 

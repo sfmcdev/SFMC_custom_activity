@@ -17,11 +17,11 @@
 			"inArguments":[
 				{ "firstName":"{{Contact.Attribute.__your-de-name__.First_Name}}"},
 				{ "lastName":"{{Contact.Attribute.__your-de-name__.Last_Name}}"},
-				{ "emailAddress": "{{Contact.Default.Email}}"},
-                { "dataFromEventTrigger": "{{Event.ContactEvent-0d2e7f87-b9a2-32b1-6120-89b2f1340239.myTriggerData}}"}		
+				{ "ContactKey": "{{Contact.Default.ContactKey}}"}
+                
 			],
             "outArguments": [
-            	{ "offerAllocationId":"number" }
+            	{ "status":"number" }
 			],			
 			"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/execute/",
             "verb": "POST",
@@ -33,7 +33,7 @@
         }
     },
     "configurationArguments": {
-    	"applicationExtensionKey": "sb-sample-offer-activity",
+    	"applicationExtensionKey": "update-points-10307602",
         "defaults": { "example_default_key": "example_default_value"},             
         "save": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
