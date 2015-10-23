@@ -23,7 +23,7 @@
             "outArguments": [
             	{ "offerAllocationId":"number" }
 			],			
-			"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/execute/",
+			"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/execute/",
             "verb": "POST",
             "body": "",
             "header": "",
@@ -36,26 +36,26 @@
     	"applicationExtensionKey": "sb-sample-offer-activity",
         "defaults": { "example_default_key": "example_default_value"},             
         "save": {
-        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/save/",
+        	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
             "body": "",
             "verb": "POST",
             "useJwt": false
         },
         "publish": {
-        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/publish/",
+        	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
             "verb": "POST",
             "body": "",
             "useJwt": false
         },
         "validate": {
-        	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/validate/",
+        	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/validate/",
             "verb": "POST",
             "body": "",
             "useJwt": false            
         }
     },
     "edit": {
-    	"url": "https://__insert_your_custom_activity_endpoint__/ixn/activities/offer/",
+    	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/",
         "height": 400,
         "width": 500
     }
