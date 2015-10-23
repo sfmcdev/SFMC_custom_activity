@@ -17,7 +17,7 @@
 			"inArguments":[
 				{ "firstName":"{{Contact.Attribute.__your-de-name__.First_Name}}"},
 				{ "lastName":"{{Contact.Attribute.__your-de-name__.Last_Name}}"},
-				{ "ContactKey": "{{Contact.Default.ContactKey}}"}
+				{ "emailAddress": "{{Contact.Default.Email}}"}
                 
 			],
             "outArguments": [

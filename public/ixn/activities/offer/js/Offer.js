@@ -74,32 +74,6 @@ define( function( require ) {
         connection.trigger('ready');
         connection.trigger('requestEndpoints');
 
-        // Disable the next button if a value isn't selected
-		/*
-        $('#selectValueTier').change(function() {
-            var valueTier = getValueTier();
-            var type = getType();
-            var bonus = getBonus();
-            var valid = Boolean(valueTier) && Boolean(bonus) && Boolean(type);
-            connection.trigger('updateButton', { button: 'next', enabled: valid });
-        });
-
-        $('#selectType').change(function() {
-            var valueTier = getValueTier();
-            var type = getType();
-            var bonus = getBonus();
-            var valid = Boolean(valueTier) && Boolean(bonus) && Boolean(type);
-            connection.trigger('updateButton', { button: 'next', enabled: valid });
-        });
-
-        $('#selectBonus').change(function() {
-            var valueTier = getValueTier();
-            var type = getType();
-            var bonus = getBonus();
-            var valid = Boolean(valueTier) && Boolean(bonus) && Boolean(type);
-            connection.trigger('updateButton', { button: 'next', enabled: valid });
-        });
-*/
 		connection.trigger('updateButton', { button: 'next', enabled: true});
 
     };

@@ -86,6 +86,9 @@ exports.execute = function( req, res ) {
 
 	// these values come from the custom activity form inputs
 	var titleEn = oArgs.titleEn;
+	var contentEn = oArgs.contentEn;
+	var titleTc = oArgs.titleTc;
+	var contentTc = oArgs.contentTc;
 	//var valueTier = oArgs.valueTier;
 	//var bonusType = oArgs.type;
 	//var bonusId = oArgs.bonus;
@@ -94,13 +97,16 @@ exports.execute = function( req, res ) {
 	// This is a placeholder that shows an example https call
 	// to a given endpoint.  Again, you can do anything you like here.
 
-	console.log('allocateOffer for ', contactKey);
+	console.log('INBOX message for ', contactKey);
 	var post_data = JSON.stringify({  
 		"contactKey":contactKey,
 		//"valueTier": valueTier,
 		//"bonusType":bonusType,
 		//"bonusId":bonusId
-		"titleEn": titleEn
+		"titleEn": titleEn,
+		"contentEn": contentEn,
+		"titleTc": titleTc,
+		"contentTc": contentTc
 	});			
 
 	var options = {
