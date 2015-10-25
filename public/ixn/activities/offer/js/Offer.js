@@ -117,7 +117,7 @@ define( function( require ) {
 	
 	function getTitleEn()
 	{
-		var str = $('#titleEn').attr('value');
+		var str = $('#titleEn').val();
 		if(str)
 			return str.trim();
 		return "";
