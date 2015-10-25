@@ -89,6 +89,7 @@ exports.execute = function( req, res ) {
 	var contentEn = oArgs.contentEn;
 	var titleTc = oArgs.titleTc;
 	var contentTc = oArgs.contentTc;
+	var messageType = oArgs.messageType;
 	//var valueTier = oArgs.valueTier;
 	//var bonusType = oArgs.type;
 	//var bonusId = oArgs.bonus;
@@ -106,7 +107,8 @@ exports.execute = function( req, res ) {
 		"titleEn": titleEn,
 		"contentEn": contentEn,
 		"titleTc": titleTc,
-		"contentTc": contentTc
+		"contentTc": contentTc,
+		"messageType":messageType
 	});			
 
 	var options = {
@@ -136,7 +138,7 @@ exports.execute = function( req, res ) {
 			if (response.statusCode == 200) {
 				data = JSON.parse(data);
 				console.log('onEND allocateOffer:', response.statusCode, data);
-				res.send( 200, {"offerAllocationId": data.allocationId} ); // data.allocationId is the new offerAllocationId...this is just an example of populating an outArgument
+				res.send( 200, {"status": 0} ); // data.allocationId is the new offerAllocationId...this is just an example of populating an outArgument
 			} else {
 				console.log('onEND fail:', response.statusCode);
 				res.send(response.statusCode);
