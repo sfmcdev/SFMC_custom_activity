@@ -97,23 +97,35 @@ define( function( require ) {
 	
 	function getTitleEn()
 	{
-		return $('#titleEn').attr('value').trim();
+		var str = $('#titleEn').attr('value');
+		if(str)
+			return str.trim();
+		return "";
 	};
 	
 	function getContentEn()
 	{
-		return $('#contentEn').attr('value').trim();
+		var str = $('#contentEn').attr('value');
+		if(str)
+			return str.trim();
+		return "";
 	};
 	
 	
 	function getTitleTc()
 	{
-		return $('#titleTc').attr('value').trim();
+		var str = $('#titleTc').attr('value');
+		if(str)
+			return str.trim();
+		return "";
 	};
 	
 	function getContentTc()
 	{
-		return $('#contentTc').attr('value').trim();
+		var str = $('#contentTc').attr('value');
+		if(str)
+			return str.trim();
+		return "";
 	};
     function getMessageType() {
         return $('#selectMessageType').find('option:selected').attr('value').trim();
