@@ -98,23 +98,23 @@ define( function( require ) {
 	function getTitleEn()
 	{
 		return $('#titleEn').attr('value').trim();
-	}
+	};
 	
 	function getContentEn()
 	{
 		return $('#contentEn').attr('value').trim();
-	}
+	};
 	
 	
 	function getTitleTc()
 	{
 		return $('#titleTc').attr('value').trim();
-	}
+	};
 	
 	function getContentTc()
 	{
 		return $('#contentTc').attr('value').trim();
-	}
+	};
     function getMessageType() {
         return $('#selectMessageType').find('option:selected').attr('value').trim();
     };
