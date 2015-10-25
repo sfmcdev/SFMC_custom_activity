@@ -141,6 +141,8 @@ define( function( require ) {
 		toJbPayload['arguments'].execute.inArguments.push({"titleTc": titleTc});
 		toJbPayload['arguments'].execute.inArguments.push({"contentTc": contentTc});
 		toJbPayload['arguments'].execute.inArguments.push({"messageType": messageType});
+		
+		alert("payload:" + toJbPayload);
         //toJbPayload['arguments'].execute.inArguments.push({"type": type});
         //toJbPayload['arguments'].execute.inArguments.push({"bonus": bonus});
 
