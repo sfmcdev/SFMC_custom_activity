@@ -15,8 +15,8 @@
     "arguments": {
         "execute": {       
 			"inArguments":[
-				{ "firstName":"{{Contact.Attribute.__your-de-name__.First_Name}}"},
-				{ "lastName":"{{Contact.Attribute.__your-de-name__.Last_Name}}"},
+				//{ "firstName":"{{Contact.Attribute.__your-de-name__.First_Name}}"},
+				//{ "lastName":"{{Contact.Attribute.__your-de-name__.Last_Name}}"},
 				{ "emailAddress": "{{Contact.Default.Email}}"}
                 
 			],
