@@ -13,7 +13,12 @@ define( function( require ) {
     $(window).ready(onRender);
 
     connection.on('initActivity', function(payload) {
-        var amount;
+        //var amount;
+		var titleEn;
+		var contentEn;
+		var titleTc;
+		var contentTc;
+		var messageType;
 
         if (payload) {
             toJbPayload = payload;
@@ -28,7 +33,14 @@ define( function( require ) {
 				}
 			}
 			//oArgs.amount will contain a value if this activity has already been configured:
-			amount = oArgs.amount || toJbPayload['configurationArguments'].defaults.amount;            
+			//amount = oArgs.amount || toJbPayload['configurationArguments'].defaults.amount;            
+			
+			
+			titleEn = oArgs.titleEn || toJbPayload['configurationArguments'].defaults.titleEn;
+			contentEn = oArgs.contentEn || toJbPayload['configurationArguments'].defaults.contentEn;
+			titleTc = oArgs.titleTc || toJbPayload['configurationArguments'].defaults.titleTc;
+			contentTc = oArgs.contentTc || toJbPayload['configurationArguments'].defaults.contentTc;
+			messageType = oArgs.messageType || toJbPayload['configurationArguments'].defaults.messageType;
         }
         
 		$.get( "/version", function( data ) {
@@ -43,6 +55,14 @@ define( function( require ) {
 
 		$('#selectAmount').find('option[value='+ amount +']').attr('selected', 'selected');		
 		*/
+		
+		
+		// load configuration
+		$('#titleEn').val(titleEn);
+		$('#titleTc').val(titleTc);
+		$('#contentEn').val(contentEn);
+		$('#contentTc').val(contentTc);
+		$('#selectMessageType').find('option[value='+ messageType +']').attr('selected', 'selected');		
 		
 		connection.trigger('updateButton', { button: 'next', enabled: false });
 		gotoStep(step);
