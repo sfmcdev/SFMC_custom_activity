@@ -34,7 +34,7 @@
     },
     "configurationArguments": {
     	"applicationExtensionKey": "update-points-10307602",
-        "defaults": { "example_default_key": "example_default_value"},             
+        "defaults": { "name": "PZH Inbox Message"},             
         "save": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
             "body": "",
