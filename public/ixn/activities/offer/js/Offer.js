@@ -125,7 +125,7 @@ define( function( require ) {
 	
 	function getContentEn()
 	{
-		var str = $('#contentEn').attr('value');
+		var str = $('#contentEn').val();
 		if(str)
 			return str.trim();
 		return "";
@@ -134,7 +134,7 @@ define( function( require ) {
 	
 	function getTitleTc()
 	{
-		var str = $('#titleTc').attr('value');
+		var str = $('#titleTc').val();
 		if(str)
 			return str.trim();
 		return "";
@@ -142,7 +142,7 @@ define( function( require ) {
 	
 	function getContentTc()
 	{
-		var str = $('#contentTc').attr('value');
+		var str = $('#contentTc').val();
 		if(str)
 			return str.trim();
 		return "";
