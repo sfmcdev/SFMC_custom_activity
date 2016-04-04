@@ -29,6 +29,7 @@
             "header": "",
             "format": "json",
             "useJwt": true,
+			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "timeout": 10000
         }
     },
@@ -39,18 +40,21 @@
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
             "body": "",
             "verb": "POST",
+			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "useJwt": true
         },
         "publish": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
             "verb": "POST",
             "body": "",
+			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "useJwt": true
         },
         "validate": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/validate/",
             "verb": "POST",
             "body": "",
+			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "useJwt": true            
         }
     },
