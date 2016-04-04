@@ -28,7 +28,7 @@
             "body": "",
             "header": "",
             "format": "json",
-            "useJwt": false,
+            "useJwt": true,
             "timeout": 10000
         }
     },
@@ -39,19 +39,19 @@
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
             "body": "",
             "verb": "POST",
-            "useJwt": false
+            "useJwt": true
         },
         "publish": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
             "verb": "POST",
             "body": "",
-            "useJwt": false
+            "useJwt": true
         },
         "validate": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/validate/",
             "verb": "POST",
             "body": "",
-            "useJwt": false            
+            "useJwt": true            
         }
     },
     "edit": {
