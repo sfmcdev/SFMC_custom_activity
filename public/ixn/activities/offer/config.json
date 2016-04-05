@@ -24,7 +24,7 @@
 			"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/execute/",
             "verb": "POST",
             "body": "",
-            "header": "",
+            "header" : "application/jwt",
             "format": "json",
             "useJwt": true,
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
@@ -36,6 +36,7 @@
         "defaults": { "name": "PZH Inbox Message"},             
         "save": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
+			"header" : "application/jwt",
             "body": "",
             "verb": "POST",
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
@@ -44,6 +45,7 @@
         "publish": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
             "verb": "POST",
+			"header" : "application/jwt",
             "body": "",
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "useJwt": true
@@ -51,6 +53,7 @@
         "validate": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/validate/",
             "verb": "POST",
+			"header" : "application/jwt",
             "body": "",
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "useJwt": true            
@@ -60,6 +63,7 @@
     	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/",
         "height": 400,
         "width": 500,
+		"header" : "application/jwt",
 		"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
         "useJwt": true            
     }
