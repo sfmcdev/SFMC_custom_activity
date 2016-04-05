@@ -14,9 +14,7 @@
     },
     "arguments": {
         "execute": {       
-			"inArguments":[
-				{ "firstName":"{{Contact.Attribute.LOYALTY_POINTS.First_Name}}"},
-				{ "lastName":"{{Contact.Attribute.LOYALTY_POINTS.Last_Name}}"},
+			"inArguments":[				
 				{ "emailAddress": "{{Contact.Default.Email}}"}
                 
 			],
