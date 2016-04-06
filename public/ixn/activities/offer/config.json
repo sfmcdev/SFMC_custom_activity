@@ -22,7 +22,7 @@
             	{ "status":"number" }
 			],			
 			"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/execute/",
-            "verb": "POST",
+            
             "body": "",
             "header" : "Content-Type: application/jwt",
             "format": "json",
@@ -38,13 +38,13 @@
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
 			"header" : "Content-Type: application/jwt",
             "body": "",
-            "verb": "POST",
+            
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "useJwt": true
         },
         "publish": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
-            "verb": "POST",
+            
 			"header" : "Content-Type: application/jwt",
             "body": "",
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
@@ -52,7 +52,7 @@
         },
         "validate": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/validate/",
-            "verb": "POST",
+            
 			"header" : "Content-Type: application/jwt",
             "body": "",
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
