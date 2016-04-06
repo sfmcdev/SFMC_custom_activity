@@ -65,8 +65,9 @@ exports.validate = function( req, res ) {
  */
 exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
-    //activityUtils.logData( req );
+    activityUtils.logData( req );
 	
+	console.log("EXECUTE(req) : ", req);
 
 	//merge the array of objects for easy access in code.
 	var aArgs = req.body.inArguments;
