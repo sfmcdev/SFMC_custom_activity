@@ -75,6 +75,12 @@ exports.execute = function( req, res ) {
     activityUtils.logData( req );
 	
 	console.log("EXECUTE(req) : ", req.body);
+	
+	if( !req.session.token )
+	{
+		console.log('NO TOKEN');
+		return;
+	}
 
 	//merge the array of objects for easy access in code.
 	var aArgs = req.body.inArguments;
