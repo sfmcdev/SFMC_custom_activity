@@ -26,7 +26,7 @@
             "body": "",
             "header" : "Content-Type: application/jwt",
             "format": "json",
-            "useJwt": true,
+            "useJwt": false,
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "timeout": 10000
         }
