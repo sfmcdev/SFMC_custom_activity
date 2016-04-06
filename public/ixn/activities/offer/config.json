@@ -14,7 +14,9 @@
     },
     "arguments": {
         "execute": {       
-			"inArguments":[				
+			"inArguments":[
+				{ "firstName":"{{Contact.Attribute.LOYALTY_POINTS.First_Name}}"},
+				{ "lastName":"{{Contact.Attribute.LOYALTY_POINTS.Last_Name}}"},
 				{ "emailAddress": "{{Contact.Default.Email}}"}
                 
 			],
@@ -22,12 +24,11 @@
             	{ "status":"number" }
 			],			
 			"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/execute/",
-            
+            "verb": "POST",
             "body": "",
-            "header" : "Content-Type: application/jwt",
+            "header": "",
             "format": "json",
             "useJwt": false,
-			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "timeout": 10000
         }
     },
@@ -36,32 +37,26 @@
         "defaults": { "name": "PZH Inbox Message"},             
         "save": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
-			"header" : "Content-Type: application/jwt",
             "body": "",
-            
-			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
+            "verb": "POST",
             "useJwt": false
         },
         "publish": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
-            
-			"header" : "Content-Type: application/jwt",
+            "verb": "POST",
             "body": "",
-			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
             "useJwt": false
         },
         "validate": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/validate/",
-            
-			"header" : "Content-Type: application/jwt",
+            "verb": "POST",
             "body": "",
-			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
-            "useJwt": false           
+            "useJwt": false            
         }
     },
     "edit": {
     	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/",
         "height": 400,
-        "width": 500         
+        "width": 500
     }
 }
