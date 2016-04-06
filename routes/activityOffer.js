@@ -21,6 +21,9 @@ exports.save = function( req, res ) {
     //console.log( req.body );
 
     activityUtils.logData( req );
+	
+	console.log("SAVE(req.body) : ", req.body);
+	
     res.send( 200, 'Save' );
 };
 
@@ -34,6 +37,7 @@ exports.publish = function( req, res ) {
     //console.log( req.body );
 
     activityUtils.logData( req );
+	
     res.send( 200, 'Publish' );
 };
 
@@ -67,7 +71,7 @@ exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
 	
-	console.log("EXECUTE(req) : ", req);
+	console.log("EXECUTE(req) : ", req.body);
 
 	//merge the array of objects for easy access in code.
 	var aArgs = req.body.inArguments;
