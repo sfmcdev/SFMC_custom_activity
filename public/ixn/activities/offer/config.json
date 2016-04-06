@@ -62,8 +62,6 @@
     "edit": {
     	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/",
         "height": 400,
-        "width": 500,
-		"header" : "",
-        "useJwt": false            
+        "width": 500         
     }
 }

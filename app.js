@@ -65,7 +65,7 @@ if ('development' == app.get('env')) {
 }
 
 // HubExchange Routes
-app.post('/', routes.index );
+app.get('/', routes.index );
 app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
