@@ -65,13 +65,21 @@ exports.validate = function( req, res ) {
  */
 exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
-    activityUtils.logData( req );
+    //activityUtils.logData( req );
+	
 
 	//merge the array of objects for easy access in code.
 	var aArgs = req.body.inArguments;
 	console.log( aArgs );
 	var oArgs = {};
-	for (var i=0; i<aArgs.length; i++) {  
+	
+	var iLen = 0;
+	if(aArgs != undefined)
+	{
+		iLen = aArgs.length;
+	}
+	for (var i=0; i<iLen; i++) 	
+	{  
 		for (var key in aArgs[i]) { 
 			oArgs[key] = aArgs[i][key]; 
 		}
