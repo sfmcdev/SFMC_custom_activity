@@ -40,7 +40,8 @@
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/save/",
             "body": "",
             "verb": "POST",
-            "useJwt": false
+            "customerKey": "adbcbac1-1f9d-4cda-9365-a9a8d928f818",
+            "useJwt": true
         },
         "publish": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
