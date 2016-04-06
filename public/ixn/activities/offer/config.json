@@ -40,7 +40,7 @@
             "body": "",
             
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
-            "useJwt": true
+            "useJwt": false
         },
         "publish": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/publish/",
@@ -48,7 +48,7 @@
 			"header" : "Content-Type: application/jwt",
             "body": "",
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
-            "useJwt": true
+            "useJwt": false
         },
         "validate": {
         	"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/validate/",
@@ -56,7 +56,7 @@
 			"header" : "Content-Type: application/jwt",
             "body": "",
 			"customerKey": '440dab3b-dbb2-4d7a-9ef2-3153f86ab33e',
-            "useJwt": true            
+            "useJwt": false           
         }
     },
     "edit": {
