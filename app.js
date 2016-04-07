@@ -56,9 +56,11 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 // for jwt
+/*
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text({ type: 'application/jwt' }));
 app.use(bodyParser.json({ type: 'application/*+json' }))
+*/
 
 app.use(express.methodOverride());
 app.use(express.favicon());
