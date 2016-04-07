@@ -81,6 +81,8 @@ exports.execute = function( req, res ) {
 		console.log('NO TOKEN');
 		return;
 	}
+	
+	console.log('TOKEN Available');
 
 	//merge the array of objects for easy access in code.
 	var aArgs = req.body.inArguments;

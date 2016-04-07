@@ -59,6 +59,12 @@ app.use(express.favicon());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
+// for jwt
+app.use(express.urlencoded());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.text({ type: 'application/jwt' }));
+app.use(bodyParser.json({ type: 'application/*+json' }))
+
 // Express in Development Mode
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
