@@ -6,6 +6,7 @@ var http        = require('http');
 var JWT         = require('./lib/jwtDecoder');
 var path        = require('path');
 var request     = require('request');
+var bodyParser  = require('body-parser');
 var routes      = require('./routes');
 var activityOffer   = require('./routes/activityOffer');
 var activityUtils    = require('./routes/activityUtils');
