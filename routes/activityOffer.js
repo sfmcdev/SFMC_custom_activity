@@ -22,7 +22,7 @@ exports.save = function( req, res ) {
 
     activityUtils.logData( req );
 	
-	console.log("SAVE(req.body) : ", req.body);
+	console.log("SAVE()|TOKEN = ", req.session.token);
 	
     res.send( 200, 'Save' );
 };
@@ -51,7 +51,7 @@ exports.validate = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
 	
-	console.log("VALIDATE(req) : ", req.body);
+	//console.log("VALIDATE(req) : ", req.body);
 	
     activityUtils.logData( req );
     res.send( 200, 'Validate' );
@@ -74,7 +74,7 @@ exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
 	
-	console.log("EXECUTE(req) : ", req.body);
+	console.log("EXECUTE()|TOKEN = ", req.session.token);
 	
 	if( !req.session.token )
 	{
