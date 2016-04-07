@@ -79,6 +79,7 @@ exports.execute = function( req, res ) {
 	if( !req.session.token )
 	{
 		console.log('NO TOKEN');
+		res.send( 200, {"status": 0} ); 
 		return;
 	}
 	
