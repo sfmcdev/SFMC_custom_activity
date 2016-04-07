@@ -10,7 +10,7 @@
     "Lachlan Ross <lachlan.ross@salesforce.com>"
   ],  
   "dependencies": {
-	"body-parser": "1.15.0",
+    "body-parser": "1.15.0",
     "express": "~3.5.0",
     "fuel": "~0.4.1",
     "require": "~0.5.0",
