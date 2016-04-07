@@ -28,6 +28,7 @@
             "body": "",
             "header": "",
             "format": "json",
+			"customerKey": "",
             "useJwt": true,			
             "timeout": 10000
         }
