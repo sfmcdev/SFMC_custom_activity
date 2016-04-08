@@ -34,6 +34,7 @@ function tokenFromJWT( req, res, next ) {
 		, appId: APIKeys.appId
 		, clientId: APIKeys.clientId
 		, clientSecret: APIKeys.clientSecret
+		, saltSecret: "SFMC CA TEST"
 	});
     
     // Object representing the data in the JWT
@@ -85,7 +86,7 @@ app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
 // Custom Activity Routes for interacting with Desk.com API
-app.post('/ixn/activities/offer/save/', activityOffer.save );
+app.post('/ixn/activities/offer/save/', tokenFromJWT, activityOffer.save );
 app.post('/ixn/activities/offer/validate/', activityOffer.validate );
 app.post('/ixn/activities/offer/publish/', activityOffer.publish );
 app.post('/ixn/activities/offer/execute/', tokenFromJWT, activityOffer.execute );
