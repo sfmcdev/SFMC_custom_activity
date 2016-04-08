@@ -27,7 +27,7 @@
             "verb": "POST",
             "body": "",
             "format": "json",
-			"customerKey": "",
+			"customerKey": "adbcbac1-1f9d-4cda-9365-a9a8d928f818",
 			"header": "",
             "useJwt": true,			
             "timeout": 10000
