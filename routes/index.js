@@ -8,7 +8,7 @@ var activityOffer = require('./activityOffer');
  * GET home page.
  */
 exports.index = function(req, res){
-    if( !req.session.token ) {
+    if( !req.session.valid ) {
         res.render( 'index', {
             title: 'Unauthenticated',
             errorMessage: 'This app may only be loaded via the Salesforce Marketing Cloud',
@@ -28,5 +28,6 @@ exports.login = function( req, res ) {
 
 exports.logout = function( req, res ) {
     req.session.token = '';
+	req.session.valid = false;
 };
 

@@ -20,7 +20,7 @@ exports.save = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
 
-	console.log("SAVE()|TOKEN = ", req.session.token);
+	console.log("SAVE()||Session.valid = ", req.session.valid);
     activityUtils.logData( req );
 		
     res.send( 200, 'Save' );
@@ -73,7 +73,7 @@ exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
 	
-	console.log("EXECUTE()|TOKEN = ", req.session.token);
+	console.log("EXECUTE()|| Session.Valid = ", req.session.valid);
 	
 	if( !req.session.token )
 	{

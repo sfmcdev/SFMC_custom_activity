@@ -45,7 +45,13 @@ function tokenFromJWT( req, res, next ) {
     // we can get away with this. Otherwise, you should use a
     // persistent storage system and manage tokens properly with
     // node-fuel
-    req.session.token = jwtData.token;
+	
+	req.session.valid = false;
+	if(jwtData != undefined && jwtData != null)
+    {
+		req.session.valid = true;
+	}
+	req.session.token = jwtData.token;
     next();
 }
 
@@ -86,7 +92,7 @@ app.post('/login', tokenFromJWT, routes.login );
 app.post('/logout', routes.logout );
 
 // Custom Activity Routes for interacting with Desk.com API
-app.post('/ixn/activities/offer/save/', tokenFromJWT, activityOffer.save );
+app.post('/ixn/activities/offer/save/', activityOffer.save );
 app.post('/ixn/activities/offer/validate/', activityOffer.validate );
 app.post('/ixn/activities/offer/publish/', activityOffer.publish );
 app.post('/ixn/activities/offer/execute/', tokenFromJWT, activityOffer.execute );
