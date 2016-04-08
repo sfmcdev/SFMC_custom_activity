@@ -28,7 +28,13 @@ var APIKeys = {
 // Simple custom middleware
 function tokenFromJWT( req, res, next ) {
     // Setup the signature for decoding the JWT
-    var jwt = new JWT({appSignature: APIKeys.appSignature});
+    var jwt = new JWT(
+	{
+		appSignature: APIKeys.appSignature
+		, appId: APIKeys.appId
+		, clientId: APIKeys.clientId
+		, clientSecret: APIKeys.clientSecret
+	});
     
     // Object representing the data in the JWT
     var jwtData = jwt.decode( req );
