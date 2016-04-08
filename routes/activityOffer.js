@@ -20,6 +20,7 @@ exports.save = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     //console.log( req.body );
 
+	console.log("SAVE()|TOKEN = ", req.session.token);
     activityUtils.logData( req );
 		
     res.send( 200, 'Save' );
