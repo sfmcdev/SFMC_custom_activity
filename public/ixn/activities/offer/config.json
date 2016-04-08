@@ -15,8 +15,6 @@
     "arguments": {
         "execute": {       
 			"inArguments":[
-				{ "firstName":"{{Contact.Attribute.LOYALTY_POINTS.First_Name}}"},
-				{ "lastName":"{{Contact.Attribute.LOYALTY_POINTS.Last_Name}}"},
 				{ "emailAddress": "{{Contact.Default.Email}}"}
                 
 			],
@@ -27,7 +25,7 @@
             "verb": "POST",
             "body": "",
             "format": "json",
-			"customerKey": "k9p4su7fxqz84np3gg9nzeru",
+			"customerKey": "adbcbac1-1f9d-4cda-9365-a9a8d928f818",
 			"header": "",
             "useJwt": true,			
             "timeout": 10000

@@ -42,6 +42,7 @@ function tokenFromJWT( req, res, next ) {
     next();
 }
 
+
 // Use the cookie-based session  middleware
 app.use(express.cookieParser());
 
