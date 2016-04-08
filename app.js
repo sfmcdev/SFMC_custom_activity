@@ -81,7 +81,7 @@ app.post('/logout', routes.logout );
 app.post('/ixn/activities/offer/save/', activityOffer.save );
 app.post('/ixn/activities/offer/validate/', activityOffer.validate );
 app.post('/ixn/activities/offer/publish/', activityOffer.publish );
-app.post('/ixn/activities/offer/execute/', jwt, activityOffer.execute );
+app.post('/ixn/activities/offer/execute/', JWT, activityOffer.execute );
 
 app.get('/clearList', function( req, res ) {
 	// The client makes this request to get the data
