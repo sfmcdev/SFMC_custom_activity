@@ -83,35 +83,6 @@ app.post('/ixn/activities/offer/validate/', activityOffer.validate );
 app.post('/ixn/activities/offer/publish/', activityOffer.publish );
 app.post('/ixn/activities/offer/execute/', tokenFromJWT, activityOffer.execute );
 
-// not sure what this does
-app.get( '/ixn/activities/generic/config.json', function( req, res ) {
-    var appName = 'activityAppName';
-    var actKey = 'appcenterKey';
-    var actName = 'activityName';
-    var actDesc = 'activityDescription';
-    var search = new RegExp('{{'+appName+'}}', 'g');
-    var json = JSON.parse(JSON.stringify(configjson));
-    json.arguments.execute.url = configjson.arguments.execute.url.replace(search,process.env[appName]);
-    json.arguments.execute.useJwt = process.env.jwtUse;
-    json.arguments.execute.customerKey = process.env.jwtExternalKey;
-    json.configurationArguments.save.url = configjson.configurationArguments.save.url.replace(search,process.env[appName]);
-    json.configurationArguments.save.useJwt = process.env.jwtUse;
-    json.configurationArguments.save.customerKey = process.env.jwtExternalKey;
-    json.configurationArguments.publish.url = configjson.configurationArguments.publish.url.replace(search,process.env[appName]);
-    json.configurationArguments.publish.useJwt = process.env.jwtUse;
-    json.configurationArguments.publish.customerKey = process.env.jwtExternalKey;
-    json.configurationArguments.validate.url = configjson.configurationArguments.validate.url.replace(search,process.env[appName]);
-    json.configurationArguments.validate.useJwt = process.env.jwtUse;
-    json.configurationArguments.validate.customerKey = process.env.jwtExternalKey;
-    json.edit.url = configjson.edit.url.replace(search,process.env[appName]);
-    search = new RegExp('{{'+actKey+'}}', 'g');
-    json.configurationArguments.applicationExtensionKey = configjson.configurationArguments.applicationExtensionKey.replace(search,process.env[actKey]);
-    search = new RegExp('{{'+actName+'}}', 'g');
-    json.lang['en-US'].name = configjson.lang['en-US'].name.replace(search,process.env[actName]);   
-    search = new RegExp('{{'+actDesc+'}}', 'g');
-    json.lang['en-US'].description = configjson.lang['en-US'].description.replace(search,process.env[actDesc]); 
-    res.status(200).send( json );
-});
 
 
 app.get('/clearList', function( req, res ) {
