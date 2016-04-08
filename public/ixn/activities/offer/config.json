@@ -26,9 +26,8 @@
 			"url": "https://custom-jb-10307602.herokuapp.com/ixn/activities/offer/execute/",
             "verb": "POST",
             "body": "",
-            "header": "",
             "format": "json",
-			"customerKey": "SFMC CA TEST",
+			"customerKey": "",
             "useJwt": true,			
             "timeout": 10000
         }

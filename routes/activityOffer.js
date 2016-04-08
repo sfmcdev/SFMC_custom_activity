@@ -21,9 +21,7 @@ exports.save = function( req, res ) {
     //console.log( req.body );
 
     activityUtils.logData( req );
-	
-	console.log("SAVE()|TOKEN = ", req.session.token);
-	
+		
     res.send( 200, 'Save' );
 };
 
