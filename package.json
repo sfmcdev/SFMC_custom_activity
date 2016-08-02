@@ -1,13 +1,13 @@
 {
   "name": "sbActivities",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "author": "SalesForce Marketing Cloud, Dev Advocate Team",
   "contributors": [
-    "Lachlan Ross <lachlan.ross@salesforce.com>"
+    "Lachlan Ross <vcheng@salesforce.com>"
   ],  
   "dependencies": {
     "body-parser": "1.15.0",
