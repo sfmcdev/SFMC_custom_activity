@@ -88,7 +88,7 @@ exports.execute = function( req, res ) {
 	//merge the array of objects for easy access in code.
 	//var aArgs = req.body.inArguments;
 	var aArgs = req.payload.inArguments;
-	console.log( aArgs );
+	console.log( "aArgs = " + aArgs );
 	var oArgs = {};
 	
 	var iLen = 0;
@@ -103,7 +103,9 @@ exports.execute = function( req, res ) {
 		}
 	}
 		
-	var contactKey = req.body.keyValue;
+	//var contactKey = req.body.keyValue;
+	var contactKey = req.payload.keyValue;
+	console.log("contactKey = " + contactKey);
 
 	// these values come from the config.json
 	var email = oArgs.emailAddress;
