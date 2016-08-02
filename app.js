@@ -49,6 +49,7 @@ function tokenFromJWT( req, res, next ) {
 	req.session.valid = false;
 	if(jwtData != undefined && jwtData != null)
     {
+		req.jwtData = jwtData;
 		req.session.valid = true;
 	}
 	req.session.token = jwtData.token;

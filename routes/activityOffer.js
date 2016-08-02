@@ -73,12 +73,16 @@ exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
 	
-	for(var key in req)
+	
+	if(req.jwtData)
 	{
-		if(req.hasOwnProperty(key))
+		for(var key in req.jwtData)
 		{
-			//console.log("req[" + key + "] = " + req[key]);
-			console.log("req." + key + " is " + typeof(req[key]));
+			if(req.jwtData.hasOwnProperty(key))
+			{
+				//console.log("req[" + key + "] = " + req[key]);
+				console.log("req.jwtData." + key + " is " + typeof(req.jwtData[key]));
+			}
 		}
 	}
 	
