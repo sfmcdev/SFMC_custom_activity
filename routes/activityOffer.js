@@ -73,19 +73,7 @@ exports.execute = function( req, res ) {
     // Data from the req and put it in an array accessible to the main app.
     activityUtils.logData( req );
 	
-	
-	if(req.jwtData)
-	{
-		for(var key in req.jwtData)
-		{
-			if(req.jwtData.hasOwnProperty(key))
-			{
-				//console.log("req[" + key + "] = " + req[key]);
-				console.log("req.jwtData." + key + " is " + typeof(req.jwtData[key]));
-			}
-		}
-	}
-	
+		
 	console.log("EXECUTE()|| Session.Valid = ", req.session.valid);
 	
 	if( !req.session.valid )
@@ -98,7 +86,8 @@ exports.execute = function( req, res ) {
 	console.log('TOKEN Available');
 
 	//merge the array of objects for easy access in code.
-	var aArgs = req.body.inArguments;
+	//var aArgs = req.body.inArguments;
+	var aArgs = req.payload.inArguments;
 	console.log( aArgs );
 	var oArgs = {};
 	
